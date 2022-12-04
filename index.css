@@ -13,7 +13,7 @@ body {
   align-items: flex-start;
   justify-content: center;
   height: 120vh;
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(6px);
 }
 .divColumn {
   margin-top: 20px;
@@ -78,6 +78,11 @@ body {
   font-size: 15px;
   cursor: pointer;
 }
+.a-buttons button:hover,
+.a-buttons button:focus {
+  background-color: #0c9494;
+}
+
 .secondBlock div {
   display: flex;
   flex-direction: row;
