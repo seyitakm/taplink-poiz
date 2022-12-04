@@ -82,7 +82,9 @@ body {
 .a-buttons button:focus {
   background-color: #0c9494;
 }
-
+.secondBlock {
+  margin-top: 40px;
+}
 .secondBlock div {
   display: flex;
   flex-direction: row;
