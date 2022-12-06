@@ -65,6 +65,11 @@ body {
   text-decoration: none;
   width: 100%;
 }
+.a-buttons h4 {
+  color: white;
+  font-size: 20px;
+  font-weight: 200;
+}
 .a-buttons button {
   padding: 10px 0;
   width: 100%;
