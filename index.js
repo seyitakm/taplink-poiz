@@ -96,7 +96,7 @@ function fly() {
 
 document.body.appendChild(mysteryBoxesContainer);
 
-for (let i = 0; i < 30; i++) {
+for (let i = 0; i < 20; i++) {
   const mysteryBox = document.createElement("div");
   mysteryBox.style.position = "absolute";
   mysteryBox.style.top = "-50px";
