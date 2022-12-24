@@ -56,8 +56,8 @@ rmbPriceInput.addEventListener("input", (event) => {
   }
   const totalCost = somPrice + deliveryCost;
 
-  somPriceSpan.textContent = somPrice;
+  somPriceSpan.textContent = parseFloat(somPrice.toFixed(2));
   deliveryCostSpan.textContent = deliveryCost;
-  totalCostSpan.textContent = totalCost;
+  totalCostSpan.textContent = parseFloat(totalCost.toFixed(2));
 });
 //calculator
