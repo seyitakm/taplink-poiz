@@ -45,12 +45,14 @@ const totalCostSpan = document.querySelector("#total-cost");
 
 rmbPriceInput.addEventListener("input", (event) => {
   const rmbPrice = event.target.value;
-  const exchangeRate = 12.7;
+  const exchangeRate = 13;
 
   const somPrice = rmbPrice * exchangeRate;
   let deliveryCost = 0;
-  if (rmbPrice <= 120) {
+  if (rmbPrice <= 100) {
     deliveryCost = 500;
+  } else if (rmbPrice <= 130) {
+    deliveryCost = 1000;
   } else {
     deliveryCost = 1500;
   }
