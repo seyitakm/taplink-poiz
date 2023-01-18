@@ -53,6 +53,14 @@ rmbPriceInput.addEventListener("input", (event) => {
     deliveryCost = 500;
   } else if (rmbPrice <= 130) {
     deliveryCost = 1000;
+  } else if (rmbPrice >= 1500 && rmbPrice <= 2000) {
+    deliveryCost = 2000;
+  } else if (rmbPrice > 2000 && rmbPrice <= 3000) {
+    deliveryCost = 2500;
+  } else if (rmbPrice > 3000 && rmbPrice <= 4000) {
+    deliveryCost = 3000;
+  } else if (rmbPrice > 4000) {
+    deliveryCost = 3500;
   } else {
     deliveryCost = 1500;
   }
