@@ -111,6 +111,10 @@
   width: 20px;
   height: 20px;
 }
+.a-buttons a img {
+  width: 15px;
+  height: 12px;
+}
 @media all and (max-width: 500px) {
   .divColumn {
     width: 340px;
