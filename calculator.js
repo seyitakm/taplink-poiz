@@ -17,8 +17,7 @@ const delay = 50; // Delay between characters in milliseconds
 let i = 0;
 
 const randomChar = () => {
-  const chars =
-    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
   return chars[Math.floor(Math.random() * chars.length)];
 };
 
