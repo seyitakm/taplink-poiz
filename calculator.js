@@ -44,7 +44,7 @@ const totalCostSpan = document.querySelector("#total-cost");
 
 rmbPriceInput.addEventListener("input", (event) => {
   const rmbPrice = event.target.value;
-  const exchangeRate = 13.2;
+  const exchangeRate = 13;
 
   const somPrice = rmbPrice * exchangeRate;
   let deliveryCost = 0;
