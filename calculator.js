@@ -12,7 +12,7 @@ for (let i = 0; i < numStars; i++) {
 //stars
 
 //text POIZONKG
-const text = "PØIZON KG";
+const text = "PØIZON SNG";
 const delay = 50; // Delay between characters in milliseconds
 let i = 0;
 
@@ -40,33 +40,52 @@ const form = document.querySelector("#calculator-form");
 const rmbPriceInput = document.querySelector("#rmb-price");
 const somPriceSpan = document.querySelector("#som-price");
 const deliveryCostSpan = document.querySelector("#delivery-cost");
+const deliverySpan = document.querySelector("#delivery");
 const totalCostSpan = document.querySelector("#total-cost");
+let currencyRateElement = document.getElementById("currency-rate");
+let changeCountry = document.getElementById("changeCountry");
+let changeOurCurrency = document.querySelector(".ourCurrencyExchange");
+
+function changeCurrency(country) {
+  if (country === "kazakhstan") {
+    currencyRateElement.textContent = "70";
+
+    changeCountry.textContent = "страна: Казахстан🇰🇿";
+    changeOurCurrency.textContent = "тенге";
+  } else if (country === "russia") {
+    currencyRateElement.textContent = "12.4";
+    changeCountry.textContent = "страна: Россия🇷🇺";
+    changeOurCurrency.textContent = "рублях";
+  } else if (country === "kyrgyzstan") {
+    currencyRateElement.textContent = "13";
+    changeCountry.textContent = "страна: Кыргызстан🇰🇬";
+    changeOurCurrency.textContent = "сомах";
+  }
+  rmbPriceInput.value = "0";
+  somPriceSpan.textContent = "0";
+  deliveryCostSpan.textContent = "0";
+  deliverySpan.textContent = "0";
+  totalCostSpan.textContent = "0";
+}
 
 rmbPriceInput.addEventListener("input", (event) => {
   const rmbPrice = event.target.value;
-  const exchangeRate = 13;
+  let exchangeRate = currencyRateElement.textContent;
 
   const somPrice = rmbPrice * exchangeRate;
   let deliveryCost = 0;
-  if (rmbPrice <= 100) {
-    deliveryCost = 500;
-  } else if (rmbPrice <= 130) {
-    deliveryCost = 1000;
-  } else if (rmbPrice >= 1500 && rmbPrice <= 2000) {
-    deliveryCost = 2000;
-  } else if (rmbPrice > 2000 && rmbPrice <= 3000) {
-    deliveryCost = 2500;
-  } else if (rmbPrice > 3000 && rmbPrice <= 4000) {
-    deliveryCost = 3000;
-  } else if (rmbPrice > 4000) {
-    deliveryCost = 3500;
+  if (changeOurCurrency.textContent === "тенге") {
+    deliveryCost = 7500;
   } else {
     deliveryCost = 1500;
   }
-  const totalCost = somPrice + deliveryCost;
+  let delivery = 1300;
+
+  const totalCost = somPrice + deliveryCost + delivery;
 
   somPriceSpan.textContent = parseFloat(somPrice.toFixed(2));
   deliveryCostSpan.textContent = deliveryCost;
+  deliverySpan.textContent = delivery;
   totalCostSpan.textContent = parseFloat(totalCost.toFixed(2));
 });
 //calculator

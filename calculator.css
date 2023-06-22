@@ -75,7 +75,7 @@ body {
 }
 .calc-container {
   background-color: #45d9d9;
-  padding: 10px;
+  padding: 15px;
   width: 80%;
   height: 300px;
   border-radius: 10px;
@@ -83,7 +83,6 @@ body {
   justify-content: center;
   flex-direction: column;
   gap: 5px;
-  align-items: center;
 }
 .rmb-price {
   color: #136161;
@@ -105,4 +104,15 @@ span {
 .logowatermark {
   width: 100px;
   height: 40px;
+}
+.countryButtons button {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  text-align: center;
+}
+.countryButtons button:hover {
+  transform: scale(1.04);
+  cursor: pointer;
 }

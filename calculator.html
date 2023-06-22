@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="./assets/poizonwhite.jpg" />
+    <link rel="icon" href="./assets/poizonminilogo.jpeg" />
     <!-- <link rel="stylesheet" href="./index.css" /> -->
     <link rel="stylesheet" href="./calculator.css" />
 
@@ -16,22 +16,29 @@
           <div class="typing-text"></div>
           <div class="calc-container">
             <form id="calculator-form">
-              <p>Курс в юанях: <span>13</span></p>
+              <span id="changeCountry">страна: Кыргызстан🇰🇬</span>
+              <p>Курс в юанях: <span id="currency-rate">13</span></p>
+
                 <label>
                   Цена в юанях:
-                  <input class="rmb-price" type="number" id="rmb-price" placeholder="введите цену"/>
+                  <input class="rmb-price" type="number" id="rmb-price" placeholder="введите цену в юанях"/>
                 </label>
                 <br />
               </form>
               <div id="result">
-                <p>Цена в сомах: <span id="som-price">0</span>сом</p>
-                <p>Наша услуга: <span id="delivery-cost">0</span>сом</p>
-                <p>Итоговая цена: <span id="total-cost">0</span> + доставка в Кыргызстан (1 кг = 12$)</p>
-              </div>
-              <a href="./index.html">
+                <p>Цена в <span class="ourCurrencyExchange">сомах</span>: <span id="som-price">0</span></p>
+                <p>Наша услуга: <span id="delivery-cost">0</span></p>
+                <p>Доставка: <span id="delivery">0</span></p>
 
-                <img class="logowatermark" src="./assets/5.svg" alt="svglogo">
-              </a>
+                <p>Итоговая цена: <span id="total-cost">0</span></p>
+              </div>
+              <div class="countryButtons">
+                <button id="kyrgyzstan" onclick="changeCurrency('kyrgyzstan')">Кыргызстан🇰🇬</button>
+                <button id="russia" onclick="changeCurrency('russia')">Россия🇷🇺</button>
+                <button id="kazakhstan" onclick="changeCurrency('kazakhstan')">Казахстан🇰🇿</button>
+
+              </div>
+              
               </div>
       </div>
        <div class="star"></div>
