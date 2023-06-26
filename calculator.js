@@ -74,12 +74,15 @@ rmbPriceInput.addEventListener("input", (event) => {
 
   const somPrice = rmbPrice * exchangeRate;
   let deliveryCost = 0;
+  let delivery = 0;
+
   if (changeOurCurrency.textContent === "тенге") {
     deliveryCost = 7500;
+    delivery = 10000;
   } else {
     deliveryCost = 1500;
+    delivery = 1300;
   }
-  let delivery = 1300;
 
   const totalCost = somPrice + deliveryCost + delivery;
 
