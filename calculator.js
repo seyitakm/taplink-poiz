@@ -53,11 +53,11 @@ function changeCurrency(country) {
     changeCountry.textContent = "страна: Казахстан🇰🇿";
     changeOurCurrency.textContent = "тенге";
   } else if (country === "russia") {
-    currencyRateElement.textContent = "12.4";
+    currencyRateElement.textContent = "13.1";
     changeCountry.textContent = "страна: Россия🇷🇺";
     changeOurCurrency.textContent = "рублях";
   } else if (country === "kyrgyzstan") {
-    currencyRateElement.textContent = "13";
+    currencyRateElement.textContent = "12.7";
     changeCountry.textContent = "страна: Кыргызстан🇰🇬";
     changeOurCurrency.textContent = "сомах";
   }
