@@ -53,7 +53,7 @@ function changeCurrency(country) {
     changeCountry.textContent = "страна: Казахстан🇰🇿";
     changeOurCurrency.textContent = "тенге";
   } else if (country === "russia") {
-    currencyRateElement.textContent = "13.1";
+    currencyRateElement.textContent = "13.7";
     changeCountry.textContent = "страна: Россия🇷🇺";
     changeOurCurrency.textContent = "рублях";
   } else if (country === "kyrgyzstan") {
@@ -79,6 +79,9 @@ rmbPriceInput.addEventListener("input", (event) => {
   if (changeOurCurrency.textContent === "тенге") {
     deliveryCost = 7500;
     delivery = 10000;
+  } else if (changeOurCurrency.textContent === "рублях") {
+    deliveryCost = 1500;
+    delivery = 1600;
   } else {
     deliveryCost = 1500;
     delivery = 1300;
